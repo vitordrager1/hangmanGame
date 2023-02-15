@@ -26,7 +26,7 @@ function readFile() {
     });
 }
 
-function cadPalavra(palavra, dica) {
+let cadPalavra(palavra,dica)=>{
     let lista = readFile();
     palavra = palavra.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
     if (lista.findIndex(element => element.palavra == palavra) == -1) {
@@ -37,7 +37,7 @@ function cadPalavra(palavra, dica) {
         console.log("\nPalavra já existente. Tente novamente!");
         return;
     }
-} 
+}
 
 
 function printPalavras() {
